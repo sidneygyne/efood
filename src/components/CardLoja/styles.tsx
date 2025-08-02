@@ -4,7 +4,6 @@ import colors from '../../styles/colors'
 
 export const Container = styled.div`
   width: 472px;
-  height: 217px;
 `
 
 export const ContainerImage = styled.div`

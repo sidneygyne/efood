@@ -1,8 +1,9 @@
 import { CardLoja } from '../CardLoja'
+import { ContainerLojas } from './style'
 
 export const Lojas = () => {
   return (
-    <div>
+    <ContainerLojas className="container">
       <CardLoja />
       <CardLoja />
       <CardLoja />
@@ -11,6 +12,6 @@ export const Lojas = () => {
       <CardLoja />
       <CardLoja />
       <CardLoja />
-    </div>
+    </ContainerLojas>
   )
 }
