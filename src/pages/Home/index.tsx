@@ -41,6 +41,7 @@
 //   }
 // ]
 
+import { CardLoja } from '../../components/CardLoja'
 import Hero from '../../components/Hero'
 
 // const emBreve: Game[] = [
@@ -89,6 +90,7 @@ import Hero from '../../components/Hero'
 const Home = () => (
   <>
     <Hero />
+    <CardLoja />
   </>
 )
 

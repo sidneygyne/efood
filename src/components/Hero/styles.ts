@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import vector from '../../assets/images/vector.png'
 
 interface HeroContainerProps {
   backgroundImage: string
