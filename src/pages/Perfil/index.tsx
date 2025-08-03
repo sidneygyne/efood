@@ -1,11 +1,13 @@
+import { FoodContainer } from '../../components/FoodContainer'
+import { Footer } from '../../components/Footer'
 import { Header } from '../../components/Header'
 
 export const Perfil = () => {
   return (
     <div>
       <Header variant="secundario" />
-      <h1>Perfil</h1>
-      <p>Detalhes do perfil do usuário.</p>
+      <FoodContainer />
+      <Footer />
     </div>
   )
 }

@@ -1,5 +1,6 @@
 import { ReactNode } from 'react'
 import styled from 'styled-components'
+import colors from '../../styles/colors'
 
 type Props = {
   backgroundImage: string
@@ -43,6 +44,12 @@ export const HeroContainer = styled.div<Props>`
   h1 {
     margin: ${(props) =>
       props.variant === 'principal' ? '0 400px 40px' : '0'};
+  }
+
+  a {
+    color: ${colors.red};
+    font-weight: 600;
+    font-size: 18px;
   }
 `
 

@@ -17,7 +17,9 @@ export const Header = ({ variant = 'principal' }: Props) => {
       ) : (
         <>
           <div className="container">
-            <p>Restaurantes</p>
+            <a href="/">
+              <p>Restaurantes</p>
+            </a>
             <Logo />
             <p> 0 produto(s) no carrinho</p>
           </div>

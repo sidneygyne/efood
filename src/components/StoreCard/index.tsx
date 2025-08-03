@@ -13,7 +13,7 @@ import {
   Assessment
 } from './styles'
 
-export const CardLoja = () => {
+export const StoreCard = () => {
   return (
     <Container>
       <ContainerImage>
@@ -37,12 +37,7 @@ export const CardLoja = () => {
           tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e
           sabor inesquecível. Peça já!
         </Description>
-        <Button
-          type="link"
-          title="Ver cardápio"
-          to="/cardapio"
-          variant="primary"
-        >
+        <Button type="link" title="Ver cardápio" to="/perfil">
           Saiba mais
         </Button>
       </ContainerDescription>

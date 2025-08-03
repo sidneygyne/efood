@@ -8,7 +8,9 @@ type Props = {
 export const Logo = ({ marginpadrao }: Props) => {
   return (
     <LogoContainer marginpadrao={marginpadrao}>
-      <img src={logoEfood} alt="Efood" />
+      <a href="/">
+        <img src={logoEfood} alt="Efood" />
+      </a>
     </LogoContainer>
   )
 }

@@ -4,14 +4,13 @@ import colors from '../../styles/colors'
 import { Props } from '.'
 
 export const ButtonContainer = styled.button<Props>`
-  background-color: ${(props) =>
-    props.variant === 'primary' ? colors.orange : colors.red};
-  font-size: 0.875rem;
+  background-color: ${colors.orange};
+  border: 0px solid transparent;
+  font-size: 14px;
   font-weight: 700;
   padding: 4px 0px;
-  color: ${colors.orange};
+  color: ${colors.red};
   cursor: pointer;
-  width: 100%;
   margin: 8px;
 `
 
