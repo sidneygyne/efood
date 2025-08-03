@@ -1,5 +1,4 @@
 import { Button } from '../Button'
-import imagemDoEstabelecimento from '../../assets/images/loja.png'
 import star from '../../assets/images/star.png'
 import {
   Description,
@@ -12,35 +11,49 @@ import {
   ContainerTitle,
   Assessment
 } from './styles'
+import { getRestaurants } from '../../services/api'
+import { useEffect, useState } from 'react'
+import { Restaurant } from '../../models/Restaurant'
 
 export const StoreCard = () => {
+  const [restaurants, setRestaurants] = useState<Restaurant[]>([])
+
+  useEffect(() => {
+    getRestaurants().then(setRestaurants)
+  }, [])
+
   return (
-    <Container>
-      <ContainerImage>
-        <img src={imagemDoEstabelecimento} alt="Imagem da estabelecimento" />
-        <Tags>
-          <Tag>Destaque</Tag>
-          <Tag>Tipo de comida</Tag>
-        </Tags>
-      </ContainerImage>
-      <ContainerDescription>
-        <ContainerTitle>
-          <Title>Nome da Loja</Title>
-          <Assessment>
-            <p>8.7</p>
-            <img src={star} alt="Estrela" />
-          </Assessment>
-        </ContainerTitle>
-        <Description>
-          A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você!
-          Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis,
-          tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e
-          sabor inesquecível. Peça já!
-        </Description>
-        <Button type="link" title="Ver cardápio" to="/perfil">
-          Saiba mais
-        </Button>
-      </ContainerDescription>
-    </Container>
+    <>
+      {restaurants.map((rest) => (
+        <Container key={rest.id}>
+          <ContainerImage>
+            <img src={rest.capa} alt={rest.titulo} />
+            <Tags>
+              <Tag className={rest.destacado ? '' : 'nao-destaque'}>
+                {rest.destacado ? 'Destaque da Semana' : ''}
+              </Tag>
+              <Tag>{rest.tipo}</Tag>
+            </Tags>
+          </ContainerImage>
+          <ContainerDescription>
+            <ContainerTitle>
+              <Title>{rest.titulo}</Title>
+              <Assessment>
+                <p>{rest.avaliacao}</p>
+                <img src={star} alt="Estrela" />
+              </Assessment>
+            </ContainerTitle>
+            <Description>{rest.descricao}</Description>
+            <Button
+              type="link"
+              title="Ver cardápio"
+              to={`/restaurant/${rest.id}`}
+            >
+              Saiba mais
+            </Button>
+          </ContainerDescription>
+        </Container>
+      ))}
+    </>
   )
 }

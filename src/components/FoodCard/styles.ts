@@ -4,7 +4,7 @@ import colors from '../../styles/colors'
 
 export const Container = styled.div`
   width: 304px;
-  height: 338px;
+  height: 416px;
   display: flex;
   flex-direction: column;
   background-color: ${colors.red};
@@ -27,6 +27,7 @@ export const Title = styled.h3`
   margin-bottom: 8px;
 `
 export const Description = styled.p`
+  height: 190px;
   font-size: 14px;
   font-weight: 400;
   line-height: 22px;

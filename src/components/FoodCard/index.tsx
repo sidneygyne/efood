@@ -2,17 +2,20 @@ import { Button } from '../Button'
 import { Container, Description, Title, FoodImage } from './styles'
 import food from '../../assets/images/food.png'
 
-export const FoodCard = () => {
+type Props = {
+  nome: string
+  descricao: string
+  foto: string
+}
+
+export const FoodCard = ({ nome, descricao, foto }: Props) => {
   return (
     <Container>
-      <FoodImage src={food} alt="Imagem da estabelecimento" />
+      <FoodImage src={foto} alt={nome} />
 
-      <Title>Nome da Comida</Title>
+      <Title>{nome}</Title>
 
-      <Description>
-        A clássica Marguerita: molho de tomate suculento, mussarela derretida,
-        manjericão fresco e um toque de azeite. Sabor e simplicidade!
-      </Description>
+      <Description>{descricao}</Description>
 
       <Button type="button" title="Ver cardápio" to="#">
         Adicionar ao carrinho

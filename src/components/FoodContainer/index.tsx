@@ -1,19 +1,23 @@
+import { MenuItem } from '../../models/Restaurant'
 import { FoodCard } from '../FoodCard'
 import { Container } from './styles'
 
-export const FoodContainer = () => {
+type Props = {
+  comidas: MenuItem[]
+}
+
+export const FoodContainer = ({ comidas }: Props) => {
   return (
     <div className="container">
       <Container>
-        <FoodCard />
-        <FoodCard />
-        <FoodCard />
-        <FoodCard />
-        <FoodCard />
-        <FoodCard />
-        <FoodCard />
-        <FoodCard />
-        <FoodCard />
+        {comidas.map((comida) => (
+          <FoodCard
+            key={comida.id}
+            nome={comida.nome}
+            descricao={comida.descricao}
+            foto={comida.foto}
+          />
+        ))}
       </Container>
     </div>
   )

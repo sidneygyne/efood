@@ -6,13 +6,6 @@ export const StoresContainer = () => {
     <div className="container">
       <ContainerLojas>
         <StoreCard />
-        <StoreCard />
-        <StoreCard />
-        <StoreCard />
-        <StoreCard />
-        <StoreCard />
-        <StoreCard />
-        <StoreCard />
       </ContainerLojas>
     </div>
   )

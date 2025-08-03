@@ -22,7 +22,10 @@ export const Tags = styled.div`
   gap: 8px;
   position: absolute;
   top: 16px;
-  left: 255px;
+  right: 16px;
+  .nao-destaque {
+    display: none;
+  }
 `
 
 export const Tag = styled.p`
@@ -34,7 +37,7 @@ export const Tag = styled.p`
 export const ContainerDescription = styled.div`
   border: 1px solid ${colors.red};
   background-color: ${colors.white};
-  height: 245px;
+  height: 268px;
 `
 
 export const ContainerTitle = styled.div`
