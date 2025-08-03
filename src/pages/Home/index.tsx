@@ -42,7 +42,7 @@
 // ]
 
 import { Footer } from '../../components/Footer'
-import Hero from '../../components/Hero'
+import { Header } from '../../components/Header'
 import { Lojas } from '../../components/Lojas'
 
 // const emBreve: Game[] = [
@@ -90,7 +90,7 @@ import { Lojas } from '../../components/Lojas'
 
 const Home = () => (
   <>
-    <Hero />
+    <Header variant="principal" />
     <Lojas />
     <Footer />
   </>
