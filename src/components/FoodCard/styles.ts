@@ -35,3 +35,54 @@ export const Description = styled.p`
   margin: 0 8px;
   color: ${colors.white};
 `
+export const ModalOverlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+
+  .close-icon {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 5px;
+    z-index: 1;
+    margin: 5px;
+  }
+`
+
+export const ModalContent = styled.div`
+  background: ${colors.red};
+  color: ${colors.white};
+  padding: 24px;
+  max-width: 60%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  ${FoodImage} {
+    height: 100%;
+    object-fit: cover;
+  }
+  ${Title} {
+    margin-bottom: 32px 0 16px;
+  }
+
+  ${Description} {
+    height: auto;
+    margin-bottom: 16px;
+  }
+`

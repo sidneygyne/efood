@@ -16,6 +16,8 @@ export const FoodContainer = ({ comidas }: Props) => {
             nome={comida.nome}
             descricao={comida.descricao}
             foto={comida.foto}
+            porcao={comida.porcao}
+            preco={comida.preco}
           />
         ))}
       </Container>
