@@ -27,10 +27,6 @@ export const HeroContainer = styled.div<Props>`
     align-items: center;
     margin: 40px auto;
   }
-  img {
-    width: ${(props) => (props.variant === 'principal' ? '200px' : '100px')};
-    height: auto;
-  }
 
   p {
     font-size: ${(props) => (props.variant === 'principal' ? '36px' : '18px')};
@@ -39,8 +35,14 @@ export const HeroContainer = styled.div<Props>`
       props.variant === 'principal' ? '0 400px 40px' : '0'};
   }
 
+  img {
+    margin: ${(props) =>
+      props.variant === 'principal' ? '40px auto 138px' : '0'};
+  }
+
   h1 {
-    margin: 0;
+    margin: ${(props) =>
+      props.variant === 'principal' ? '0 400px 40px' : '0'};
   }
 `
 
