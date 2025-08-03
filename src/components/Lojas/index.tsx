@@ -3,15 +3,17 @@ import { ContainerLojas } from './style'
 
 export const Lojas = () => {
   return (
-    <ContainerLojas className="container">
-      <CardLoja />
-      <CardLoja />
-      <CardLoja />
-      <CardLoja />
-      <CardLoja />
-      <CardLoja />
-      <CardLoja />
-      <CardLoja />
-    </ContainerLojas>
+    <div className="container">
+      <ContainerLojas>
+        <CardLoja />
+        <CardLoja />
+        <CardLoja />
+        <CardLoja />
+        <CardLoja />
+        <CardLoja />
+        <CardLoja />
+        <CardLoja />
+      </ContainerLojas>
+    </div>
   )
 }

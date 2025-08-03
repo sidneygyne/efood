@@ -41,6 +41,7 @@
 //   }
 // ]
 
+import { Footer } from '../../components/Footer'
 import Hero from '../../components/Hero'
 import { Lojas } from '../../components/Lojas'
 
@@ -91,6 +92,7 @@ const Home = () => (
   <>
     <Hero />
     <Lojas />
+    <Footer />
   </>
 )
 
