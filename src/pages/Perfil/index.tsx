@@ -4,6 +4,7 @@ import { FoodContainer } from '../../components/FoodContainer'
 import { Footer } from '../../components/Footer'
 import { Header } from '../../components/Header'
 import { getRestaurantePorId } from '../../services/api'
+import { Hero } from '../../components/Hero'
 
 export const Restaurant = () => {
   const { id } = useParams<{ id: string }>()
@@ -20,6 +21,7 @@ export const Restaurant = () => {
   return (
     <div>
       <Header variant="secundario" />
+      <Hero />
       <FoodContainer comidas={comidas} />
       <Footer />
     </div>

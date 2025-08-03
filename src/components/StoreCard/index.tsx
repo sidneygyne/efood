@@ -1,3 +1,4 @@
+import { useRestaurants } from '../../hooks/useRestaurants'
 import { Button } from '../Button'
 import star from '../../assets/images/star.png'
 import {
@@ -11,16 +12,12 @@ import {
   ContainerTitle,
   Assessment
 } from './styles'
-import { getRestaurants } from '../../services/api'
-import { useEffect, useState } from 'react'
-import { Restaurant } from '../../models/Restaurant'
 
 export const StoreCard = () => {
-  const [restaurants, setRestaurants] = useState<Restaurant[]>([])
+  const { restaurants, isLoading, error } = useRestaurants()
 
-  useEffect(() => {
-    getRestaurants().then(setRestaurants)
-  }, [])
+  if (isLoading) return <p>Carregando...</p>
+  if (error) return <p>Erro ao carregar os dados.</p>
 
   return (
     <>

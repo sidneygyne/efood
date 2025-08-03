@@ -1,6 +1,13 @@
 import styled from 'styled-components'
 
-export const ContainerLojas = styled.section`
+export const Container = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+`
+
+export const ContainerLojas = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 48px 80px;
