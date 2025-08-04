@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import colors from '../../styles/colors'
 
 export const ContainerFooter = styled.footer`
-  background-color: ${colors.orange};
+  background-color: ${colors.darkOrange};
   display: flex;
   flex-direction: column;
   align-items: center;

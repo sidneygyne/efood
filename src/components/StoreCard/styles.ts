@@ -37,7 +37,7 @@ export const Tag = styled.p`
 export const ContainerDescription = styled.div`
   border: 1px solid ${colors.red};
   background-color: ${colors.white};
-  height: 268px;
+  height: 212px;
 `
 
 export const ContainerTitle = styled.div`
@@ -54,16 +54,15 @@ export const Assessment = styled.div`
   margin-right: 8px;
 `
 export const Title = styled.h3`
-  font-size: 1.125rem;
+  font-size: 18px;
   font-weight: 700;
   display: block;
-
   margin-left: 8px;
 `
 export const Description = styled.p`
-  font-size: 0.875rem;
+  font-size: 14px;
   font-weight: 400;
-  line-height: 1.375rem;
+  line-height: 22px;
   display: block;
   margin: 0 8px 16px 8px;
 `
@@ -116,18 +115,16 @@ export const ModalContent = styled.div`
 
   > img {
     width: 100%;
-
   }
 
   img,
   iframe {
     display: block;
     max-width: 100%;
-
   }
 
   iframe {
     width: 100%;
-    height: 480px;1;
+    height: 480px;
   }
 `

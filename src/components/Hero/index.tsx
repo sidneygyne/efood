@@ -1,10 +1,10 @@
-import { HeroContainer } from './styles'
-import HeroImage from '../../assets/images/hero.png'
+import { HeroContainer, HeroImage } from './styles'
+import HeroImagePng from '../../assets/images/hero.png'
 
 export const Hero = () => {
   return (
     <HeroContainer>
-      <img src={HeroImage} alt="Welcome to Our Restaurant" />
+      <HeroImage src={HeroImagePng} alt="Welcome to Our Restaurant" />
     </HeroContainer>
   )
 }

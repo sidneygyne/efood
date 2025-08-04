@@ -16,7 +16,7 @@ export const GlobalCss = createGlobalStyle`
   }
 
   body {
-      background-color: ${colors.ligthOrange};
+      background-color: ${colors.orange};
     color: ${colors.red};
   }
 

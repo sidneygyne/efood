@@ -8,7 +8,6 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   background-color: ${colors.red};
-  margin: 10px;
 `
 
 export const FoodImage = styled.img<React.ImgHTMLAttributes<HTMLImageElement>>`

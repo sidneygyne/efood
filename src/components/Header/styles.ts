@@ -13,7 +13,7 @@ export const HeroContainer = styled.div<Props>`
   background-size: cover;
   background-position: center;
   height: ${(props) => (props.variant === 'principal' ? '408px' : '186px')};
-  width: 1366px;
+  width: 100%;
   display: flex;
   flex-direction: ${(props) =>
     props.variant === 'principal' ? 'column' : 'row'};
