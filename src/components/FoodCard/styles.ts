@@ -3,8 +3,8 @@ import styled from 'styled-components'
 import colors from '../../styles/colors'
 
 export const Container = styled.div`
-  width: 304px;
-  height: 416px;
+  width: 320px;
+  height: 338px;
   display: flex;
   flex-direction: column;
   background-color: ${colors.red};
@@ -15,7 +15,7 @@ export const FoodImage = styled.img<React.ImgHTMLAttributes<HTMLImageElement>>`
   width: 304px;
   height: 167px;
   object-fit: cover;
-  padding: 8px;
+  margin: 8px;
 `
 export const Title = styled.h3`
   font-size: 16px;
@@ -30,9 +30,13 @@ export const Description = styled.p`
   font-size: 14px;
   font-weight: 400;
   line-height: 22px;
-  display: block;
   margin: 0 8px;
   color: ${colors.white};
+  display: -webkit-box;
+  -webkit-line-clamp: 4; // número de linhas desejadas
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `
 export const ModalOverlay = styled.div`
   position: fixed;
