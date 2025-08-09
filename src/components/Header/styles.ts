@@ -56,3 +56,14 @@ export const HeroContainer = styled.div<Props>`
 export const HeroContent = styled.h2`
   font-weight: 600;
 `
+
+export const CartButton = styled.span`
+  display: flex;
+  font-size: 18px;
+  font-style: black;
+  font-weight: 900;
+  cursor: pointer;
+
+  img {
+  }
+`

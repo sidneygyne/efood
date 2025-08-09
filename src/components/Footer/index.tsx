@@ -3,6 +3,7 @@ import { ContainerFooter, SocialMedia } from './styles'
 import facebook from '../../assets/images/icon-facebook.png'
 import instagram from '../../assets/images/icon-instagran.png'
 import xtwiter from '../../assets/images/icon-x.png'
+import { Link } from 'react-router-dom'
 
 // const currentYear = new Date().getFullYear()
 
@@ -11,19 +12,19 @@ export const Footer = () => (
     <Logo marginpadrao />
     <SocialMedia>
       <li>
-        <a href="#">
+        <Link to="#">
           <img src={instagram} alt="Instagram" />
-        </a>
+        </Link>
       </li>
       <li>
-        <a href="#">
+        <Link to="#">
           <img src={facebook} alt="Facebook" />
-        </a>
+        </Link>
       </li>
       <li>
-        <a href="#">
+        <Link to="#">
           <img src={xtwiter} alt="Instagram" />
-        </a>
+        </Link>
       </li>
     </SocialMedia>
     <p>

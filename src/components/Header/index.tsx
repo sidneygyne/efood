@@ -1,8 +1,9 @@
-import { HeroContainer, HeroContent } from './styles'
+import { CartButton, HeroContainer, HeroContent } from './styles'
 import { Logo } from '../Logo'
 import heroBackground from '../../assets/images/vector.png'
 import { useDispatch, useSelector } from 'react-redux'
 import { open } from '../store/reducers/cart'
+import { Link } from 'react-router-dom'
 
 type Props = {
   variant?: 'principal' | 'secundario'
@@ -26,11 +27,14 @@ export const Header = ({ variant = 'principal' }: Props) => {
       ) : (
         <>
           <div className="container">
-            <a href="/">
+            <Link to="/">
               <p>Restaurantes</p>
-            </a>
+            </Link>
             <Logo />
-            <p onClick={openCart}> {items.length} produto(s) no carrinho</p>
+            <CartButton onClick={openCart}>
+              {' '}
+              {items.length} produto(s) no carrinho
+            </CartButton>
           </div>
         </>
       )}

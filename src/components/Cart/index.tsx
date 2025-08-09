@@ -29,8 +29,9 @@ export const Cart = () => {
     dispatch(close())
   }
 
-  const handleRemoveItem = (id: number) => {
+  const handleRemoveItem = (id: number | string) => {
     dispatch(removeItem(id.toString()))
+    console.log('Remover item:', id)
   }
 
   const goToCheckout = () => {
@@ -51,13 +52,10 @@ export const Cart = () => {
                   <div>
                     <h3>{item.nome}</h3>
                     <span>{parseToBrl(item.preco)}</span>
+                    {/* <span>{item.quantity}</span> */}
                   </div>
                   <Close
-                    onClick={() => {
-                      if (typeof item.id === 'number') {
-                        handleRemoveItem(item.id)
-                      }
-                    }}
+                    onClick={() => handleRemoveItem(item.id)}
                     type="button"
                     style={{ backgroundImage: `url(${lixeira})` }}
                   />

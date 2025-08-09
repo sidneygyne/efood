@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { Restaurant } from '../../../models/Restaurant'
 
 export interface CartItem {
-  id?: number
+  id: number
   nome: string
   descricao: string
   foto: string
@@ -27,18 +27,20 @@ const cartSlice = createSlice({
   reducers: {
     addItem(state, action: PayloadAction<CartItem>) {
       const itemIndex = state.items.findIndex(
-        (item) => item.nome === action.payload.nome
+        (item) => item.id === action.payload.id
       )
       if (itemIndex >= 0) {
         // Se já existe, só incrementa a quantidade
-        state.items[itemIndex].quantity += action.payload.quantity
+        // state.items[itemIndex].quantity += action.payload.quantity
+        alert('Poduto já está no carrinho!')
       } else {
         state.items.push(action.payload)
       }
     },
-    removeItem(state, action: PayloadAction<string>) {
-      // Remove pelo nome do item (ou id, se tiver)
-      state.items = state.items.filter((item) => item.nome !== action.payload)
+    removeItem: (state, action) => {
+      state.items = state.items.filter(
+        (item) => item.id.toString() !== action.payload
+      )
     },
     clearCart(state) {
       state.items = []

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import logoEfood from '../../assets/images/logo.png'
 import { LogoContainer } from './styles'
 
@@ -8,9 +9,9 @@ type Props = {
 export const Logo = ({ marginpadrao }: Props) => {
   return (
     <LogoContainer marginpadrao={marginpadrao}>
-      <a href="/">
+      <Link to="/">
         <img src={logoEfood} alt="Efood" />
-      </a>
+      </Link>
     </LogoContainer>
   )
 }

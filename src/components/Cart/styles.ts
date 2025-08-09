@@ -43,6 +43,7 @@ export const Sidebar = styled.aside`
     line-height: 22px;
     color: ${colors.white};
     text-align: center;
+    margin: 16px 8px;
   }
 
   ul {
