@@ -1,17 +1,22 @@
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import colors from '../../styles/colors'
-import { Props } from '.'
+
+type Props = {
+  variant: 'primary' | 'secondary'
+}
 
 export const ButtonContainer = styled.button<Props>`
+  display: inline-block;
+  width: ${(props) => (props.variant === 'primary' ? 'auto' : 'fit-content')};
   background-color: ${colors.orange};
   border: 0px solid transparent;
   font-size: 14px;
   font-weight: 700;
-  padding: 4px 0px;
+  margin: ${(props) => (props.variant === 'primary' ? '8px' : '20px 0 0')};
+  padding: ${(props) => (props.variant === 'primary' ? '4px 0px' : '4px 7px')};
   color: ${colors.red};
   cursor: pointer;
-  margin: 8px;
 `
 
 export const ButtonLink = styled(Link)`

@@ -39,6 +39,7 @@ export const FoodCard = ({ nome, descricao, foto, porcao, preco }: Props) => {
         <Button
           type="button"
           title="Ver cardápio"
+          variant="primary"
           to="#"
           onClick={() => setModalAberta(true)}
         >
@@ -58,11 +59,15 @@ export const FoodCard = ({ nome, descricao, foto, porcao, preco }: Props) => {
 
             <div>
               <Title>{nome}</Title>
-              <Description>{descricao}</Description>
-              <Description>{porcao}</Description>
+              <div className="description">
+                <Description>{descricao}</Description>
+                <Description>{porcao}</Description>
+              </div>
+
               <Button
                 type="button"
                 title="Adicionar ao carrinho"
+                variant="secondary"
                 to="#"
                 onClick={() => {
                   // ação para adicionar ao carrinho

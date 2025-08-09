@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import colors from '../../styles/colors'
 
 export const Container = styled.div`
+  max-width: 100%;
   width: 320px;
   height: 338px;
   display: flex;
@@ -63,29 +64,42 @@ export const ModalOverlay = styled.div`
 export const ModalContent = styled.div`
   background: ${colors.red};
   color: ${colors.white};
-  padding: 24px;
-  max-width: 60%;
-  width: 100%;
+  /* padding: 24px; */
+  width: 1024px;
+  height: 344px;
   position: relative;
   display: flex;
   flex-direction: row;
-  gap: 16px;
+  gap: 24px;
 
   div {
     display: flex;
     flex-direction: column;
+    align-items: ;
   }
 
   ${FoodImage} {
-    height: 100%;
+    height: 280px;
+    width: 280px;
+    margin: 32px 0 32px 32px;
     object-fit: cover;
   }
   ${Title} {
-    margin-bottom: 32px 0 16px;
+    margin: 32px 0 16px;
+  }
+
+  .description {
+    width: 656px;
+    height: 176px;
+    display: flex;
+    align-content: flex-end;
+    gap: 70px;
   }
 
   ${Description} {
+    margin: 0;
+    width: auto;
     height: auto;
-    margin-bottom: 16px;
+    -webkit-line-clamp: 8; // número de linhas desejadas
   }
 `
