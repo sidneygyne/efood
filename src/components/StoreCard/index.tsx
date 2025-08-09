@@ -12,6 +12,7 @@ import {
   ContainerTitle,
   Assessment
 } from './styles'
+import { Restaurant } from '../../models/Restaurant'
 
 export const StoreCard = () => {
   const { restaurants, isLoading, error } = useRestaurants()
@@ -21,7 +22,7 @@ export const StoreCard = () => {
 
   return (
     <>
-      {restaurants.map((rest) => (
+      {restaurants.map((rest: Restaurant) => (
         <Container key={rest.id}>
           <ContainerImage>
             <img src={rest.capa} alt={rest.titulo} />

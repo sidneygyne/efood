@@ -1,12 +1,3 @@
-export interface MenuItem {
-  id: number
-  nome: string
-  descricao: string
-  preco: number
-  porcao: string
-  foto: string
-}
-
 export interface Restaurant {
   id: number
   titulo: string
@@ -16,4 +7,13 @@ export interface Restaurant {
   descricao: string
   capa: string
   cardapio: MenuItem[]
+}
+
+export interface MenuItem {
+  id: number
+  nome: string
+  descricao: string
+  preco: number
+  porcao: string
+  foto: string
 }

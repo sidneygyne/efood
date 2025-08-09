@@ -1,3 +1,5 @@
+import { useAppDispatch } from '../../hooks/useAppDispatch'
+import { addItem } from '../store/reducers/cart'
 import { useState } from 'react'
 import { Button } from '../Button'
 import {
@@ -12,6 +14,7 @@ import { parseToBrl } from '../../utils'
 import closeIcon from '../../assets/images/close.png'
 
 type Props = {
+  id: number
   nome: string
   descricao: string
   foto: string
@@ -20,10 +23,33 @@ type Props = {
   // nomeRestaurante?: string // Uncomment if needed
 }
 
-export const FoodCard = ({ nome, descricao, foto, porcao, preco }: Props) => {
+export const FoodCard = ({
+  id,
+  nome,
+  descricao,
+  foto,
+  porcao,
+  preco
+}: Props) => {
   const [modalAberta, setModalAberta] = useState(false)
+  const dispatch = useAppDispatch()
 
   const closeModal = () => {
+    setModalAberta(false)
+  }
+
+  const handleAddToCart = () => {
+    dispatch(
+      addItem({
+        id,
+        nome,
+        descricao,
+        foto,
+        porcao,
+        preco,
+        quantity: 1
+      })
+    )
     setModalAberta(false)
   }
 
@@ -69,10 +95,7 @@ export const FoodCard = ({ nome, descricao, foto, porcao, preco }: Props) => {
                 title="Adicionar ao carrinho"
                 variant="secondary"
                 to="#"
-                onClick={() => {
-                  // ação para adicionar ao carrinho
-                  setModalAberta(false)
-                }}
+                onClick={handleAddToCart}
               >
                 {`Adicionar ao carrinho -  ${parseToBrl(preco)}`}
               </Button>

@@ -1,18 +1,34 @@
-import { useEffect, useState } from 'react'
-import { getRestaurants } from '../services/api'
+import { useGetRestaurantsQuery } from '../services/api'
 import { Restaurant } from '../models/Restaurant'
 
+type UseRestaurantsResult = {
+  restaurants: Restaurant[]
+  isLoading: boolean
+  error: unknown
+}
+
 export const useRestaurants = () => {
-  const [restaurants, setRestaurants] = useState<Restaurant[]>([])
-  const [isLoading, setIsLoading] = useState(true)
-  const [error, setError] = useState<Error | null>(null)
+  const {
+    data: restaurants,
+    isLoading,
+    error
+  } = useGetRestaurantsQuery(undefined)
+  // const [restaurants, setRestaurants] = useState<Restaurant[]>([])
+  // const [isLoading, setIsLoading] = useState(true)
+  // const [error, setError] = useState<Error | null>(null)
 
-  useEffect(() => {
-    getRestaurants()
-      .then((data) => setRestaurants(data))
-      .catch((err) => setError(err))
-      .finally(() => setIsLoading(false))
-  }, [])
+  return {
+    restaurants: restaurants ?? [],
+    isLoading,
+    error
+  }
 
-  return { restaurants, isLoading, error }
+  // useEffect(() => {
+  //   getRestaurants()
+  //     .then((data) => setRestaurants(data))
+  //     .catch((err) => setError(err))
+  //     .finally(() => setIsLoading(false))
+  // }, [])
+
+  // return { restaurants, isLoading, error }
 }

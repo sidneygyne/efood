@@ -1,4 +1,4 @@
-import { Restaurant } from '../models/Restaurant'
+import { MenuItem, Restaurant } from '../models/Restaurant'
 
 //Formata preço
 export const parseToBrl = (amout = 0) => {
@@ -8,11 +8,12 @@ export const parseToBrl = (amout = 0) => {
   }).format(amout)
 }
 
-// export const getTotalPrice = (items: Restaurant[]) => {
-//   return items.reduce((accumulator, currentItem) => {
-//     if (currentItem.prices.current) {
-//       return (accumulator += currentItem.prices.current)
-//     }
-//     return 0
-//   }, 0)
-// }
+// esta diferente conferir
+export const getTotalPrice = (items: MenuItem[]) => {
+  return items.reduce((accumulator, currentItem) => {
+    if (currentItem.preco) {
+      return (accumulator += currentItem.preco)
+    }
+    return 0
+  }, 0)
+}

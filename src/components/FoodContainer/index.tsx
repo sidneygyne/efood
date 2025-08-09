@@ -12,6 +12,7 @@ export const FoodContainer = ({ comidas }: Props) => {
       <Container>
         {comidas.map((comida) => (
           <FoodCard
+            id={comida.id}
             key={comida.id}
             nome={comida.nome}
             descricao={comida.descricao}
