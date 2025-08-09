@@ -87,7 +87,9 @@ export const FoodCard = ({
               <Title>{nome}</Title>
               <div className="description">
                 <Description>{descricao}</Description>
-                <Description>{porcao}</Description>
+                <Description>
+                  Serve: {porcao === '1 pessoa' ? '1 pessoa' : `de ${porcao}`}
+                </Description>
               </div>
 
               <Button
