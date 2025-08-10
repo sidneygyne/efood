@@ -50,6 +50,10 @@ export const Sidebar = styled.aside`
     margin-top: 32px;
     margin-bottom: 24px;
   }
+
+  .containerButton {
+    max-width: 95.5%;
+  }
 `
 export const Prices = styled.p`
   font-weight: bold;

@@ -11,6 +11,10 @@ export const Restaurant = () => {
   const { data, isLoading, error } = useGetRestaurantByIdQuery(id || '')
   const [comidas, setComidas] = useState([])
 
+  const imagemComida = data?.cardapio?.[0]?.foto
+  const foodType = data?.tipo
+  const restaurantName = data?.titulo
+
   useEffect(() => {
     if (data) {
       setComidas(data.cardapio)
@@ -23,7 +27,11 @@ export const Restaurant = () => {
   return (
     <div>
       <Header variant="secundario" />
-      <Hero />
+      <Hero
+        image={imagemComida}
+        foodType={foodType}
+        restaurantName={restaurantName}
+      />
       <FoodContainer comidas={comidas} />
       <Footer />
     </div>

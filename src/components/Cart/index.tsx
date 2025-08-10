@@ -76,13 +76,16 @@ export const Cart = () => {
                 )}
               </p>
             </Prices>
-            <Button
-              onClick={goToCheckout}
-              title="Clique aqui para continuar com a compra"
-              type="button"
-            >
-              Continuar com a compra
-            </Button>
+            <div className="containerButton">
+              <Button
+                onClick={goToCheckout}
+                title="Clique aqui para continuar com a compra"
+                type="button"
+                variant="primary"
+              >
+                Continuar com a compra
+              </Button>
+            </div>
           </>
         ) : (
           <p className="empty-text">
