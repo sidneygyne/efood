@@ -9,21 +9,16 @@ type Product = {
 
 type PurchasePayload = {
   products: Product[]
-  billing: {
-    name: string
-    email: string
-    document: string
-  }
   delivery: {
-    email: string
+    fullname: string
+    address: string
+    city: string
+    cep: string
+    number: string
+    complement: string
   }
   payment: {
     card: {
-      active: boolean
-      owner?: {
-        name: string
-        document: string
-      }
       name?: string
       number?: string
       expires?: {
@@ -62,17 +57,8 @@ export const api = createApi({
   })
 })
 
-// const api = axios.create({
-//   baseURL: 'https://ebac-fake-api.vercel.app/api/efood'
-// })
-
-// export const getRestaurantePorId = (id: string) => {
-//   return api.get(`/restaurantes/${id}`)
-// }
-
-// export const getRestaurants = async (): Promise<Restaurant[]> => {
-//   const response = await api.get<Restaurant[]>('/restaurantes')
-//   return response.data
-// }
-
-export const { useGetRestaurantsQuery, useGetRestaurantByIdQuery } = api
+export const {
+  useGetRestaurantsQuery,
+  useGetRestaurantByIdQuery,
+  usePurchaseMutation
+} = api

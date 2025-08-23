@@ -5,7 +5,7 @@ export type Props = {
   title: string
   to?: string
   onClick?: () => void
-  children: string
+  children: React.ReactNode
   variant?: 'primary' | 'secondary'
   disabled?: boolean
 }

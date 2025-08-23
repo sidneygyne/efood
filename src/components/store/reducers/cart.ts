@@ -14,11 +14,13 @@ export interface CartItem {
 type CartState = {
   items: CartItem[]
   isOpen: boolean
+  isOpenCheckout: boolean
 }
 
 const initialState: CartState = {
   items: [],
-  isOpen: false
+  isOpen: false,
+  isOpenCheckout: false
 }
 
 const cartSlice = createSlice({
@@ -42,6 +44,7 @@ const cartSlice = createSlice({
         (item) => item.id.toString() !== action.payload
       )
     },
+
     clearCart(state) {
       state.items = []
     },
@@ -49,6 +52,7 @@ const cartSlice = createSlice({
     open: (state) => {
       state.isOpen = true
     },
+
     close: (state) => {
       state.isOpen = false
     }

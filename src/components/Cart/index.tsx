@@ -18,6 +18,7 @@ import {
   Sidebar
 } from './styles'
 import { getTotalPrice, parseToBrl } from '../../utils'
+import { openCheckout } from '../store/reducers/checkout'
 
 export const Cart = () => {
   const { isOpen, items } = useSelector((state: RootState) => state.cart)
@@ -35,8 +36,8 @@ export const Cart = () => {
   }
 
   const goToCheckout = () => {
-    navigate('/checkout')
     dispatch(close())
+    dispatch(openCheckout())
   }
 
   return (

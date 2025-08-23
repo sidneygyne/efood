@@ -9,11 +9,11 @@ type Props = {
 export const ButtonContainer = styled.button<Props>`
   display: inline-block;
   width: ${(props) => (props.variant === 'primary' ? 'auto' : 'fit-content')};
-  background-color: ${colors.orange};
+  background-color: ${colors.darkOrange};
   border: 0px solid transparent;
   font-size: 14px;
   font-weight: 700;
-  margin: ${(props) => (props.variant === 'primary' ? '8px' : '20px 0 0')};
+  margin: ${(props) => (props.variant === 'primary' ? '8px' : '0')};
   padding: ${(props) => (props.variant === 'primary' ? '4px 0px' : '4px 7px')};
   color: ${colors.red};
   cursor: pointer;

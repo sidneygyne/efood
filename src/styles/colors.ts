@@ -3,5 +3,7 @@ export default {
   ligthOrange: '#ffffff',
   darkOrange: '#ffebd9',
   red: '#e66767',
-  white: '#fff'
+  white: '#fff',
+  gray: '#4b4b4b',
+  error: '#fadadaff'
 }
