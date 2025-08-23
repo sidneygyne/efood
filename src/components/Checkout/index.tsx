@@ -51,6 +51,7 @@ export const Checkout = () => {
     dispatch(closeCheckout())
     dispatch(goToStep(1))
     reset()
+    form.resetForm()
     navigate('/')
   }
   const form = useFormik({
