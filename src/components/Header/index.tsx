@@ -28,7 +28,7 @@ export const Header = ({ variant = 'principal' }: Props) => {
         <>
           <div className="container">
             <Link to="/">
-              <p>Restaurantes</p>
+              <p className="textRestaurant">Restaurantes</p>
             </Link>
             <Logo />
             <CartButton onClick={openCart}>

@@ -1,5 +1,4 @@
 import { HeroContainer, HeroImage, Info } from './styles'
-import HeroImagePng from '../../assets/images/hero.png'
 
 type HeroProps = {
   image: string

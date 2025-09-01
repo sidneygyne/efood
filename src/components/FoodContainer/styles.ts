@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { breakpoints } from '../../styles'
 
 export const Container = styled.section`
   display: grid;
@@ -6,4 +7,10 @@ export const Container = styled.section`
   gap: 32px;
   margin-top: 56px;
   margin-bottom: 120px;
+
+  @media (max-width: ${breakpoints.desktop}) {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
 `

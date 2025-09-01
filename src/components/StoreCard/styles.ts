@@ -1,9 +1,14 @@
 // import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import colors from '../../styles/colors'
+import { breakpoints } from '../../styles'
 
 export const Container = styled.div`
   width: 472px;
+
+  @media (max-width: ${breakpoints.desktop}) {
+    width: 100%;
+  }
 `
 
 export const ContainerImage = styled.div`
@@ -14,6 +19,10 @@ export const ContainerImage = styled.div`
     width: 472px;
     height: 217px;
     object-fit: cover;
+
+    @media (max-width: ${breakpoints.desktop}) {
+      width: 100%;
+    }
   }
 `
 
@@ -38,6 +47,11 @@ export const ContainerDescription = styled.div`
   border: 1px solid ${colors.red};
   background-color: ${colors.white};
   height: 212px;
+
+  @media (max-width: ${breakpoints.desktop}) {
+    height: auto;
+    padding-bottom: 20px;
+  }
 `
 
 export const ContainerTitle = styled.div`

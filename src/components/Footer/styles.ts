@@ -1,6 +1,7 @@
 // import { HashLink } from 'react-router-hash-link'
 import styled from 'styled-components'
 import colors from '../../styles/colors'
+import { breakpoints } from '../../styles'
 
 export const ContainerFooter = styled.footer`
   background-color: ${colors.darkOrange};
@@ -12,6 +13,9 @@ export const ContainerFooter = styled.footer`
     font-size: 0.625rem;
     margin-bottom: 40px;
     text-align: center;
+    @media (max-width: ${breakpoints.tablet}) {
+      margin: 10px;
+    }
   }
 `
 export const SocialMedia = styled.ul`
@@ -22,4 +26,8 @@ export const SocialMedia = styled.ul`
   flex-direction: row;
   align-items: center;
   gap: 8px;
+
+  @media (max-width: ${breakpoints.tablet}) {
+    margin: 10px;
+  }
 `

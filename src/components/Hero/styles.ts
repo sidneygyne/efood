@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import colors from '../../styles/colors'
+import { breakpoints } from '../../styles'
 
 export const HeroContainer = styled.div`
   width: 100%;
@@ -14,7 +15,7 @@ export const HeroContainer = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6); // ajuste a opacidade conforme desejar
+    background: rgba(0, 0, 0, 0.6);
     z-index: 1;
     pointer-events: none;
   }
@@ -38,6 +39,10 @@ export const Info = styled.div`
   flex-direction: column;
   justify-content: space-between;
   padding: 25px 0 32px 170px;
+
+  @media (max-width: ${breakpoints.tablet}) {
+    padding: 46px 10px 46px 46px;
+  }
 
   h3 {
     font-size: 32px;

@@ -1,6 +1,7 @@
 import { ReactNode } from 'react'
 import styled from 'styled-components'
 import colors from '../../styles/colors'
+import { breakpoints } from '../../styles'
 
 type Props = {
   backgroundImage: string
@@ -8,7 +9,7 @@ type Props = {
   children: ReactNode
 }
 
-export const HeroContainer = styled.div<Props>`
+export const HeroContainer = styled.header<Props>`
   background-image: url(${(props) => props.backgroundImage});
   background-size: cover;
   background-position: center;
@@ -33,7 +34,7 @@ export const HeroContainer = styled.div<Props>`
     font-size: ${(props) => (props.variant === 'principal' ? '36px' : '18px')};
     font-weight: 900;
     margin: ${(props) =>
-      props.variant === 'principal' ? '0 400px 40px' : '0'};
+      props.variant === 'principal' ? '0 100px 40px' : '0'};
   }
 
   img {
@@ -50,6 +51,43 @@ export const HeroContainer = styled.div<Props>`
     color: ${colors.red};
     font-weight: 600;
     font-size: 18px;
+  }
+
+  .textRestaurant {
+    @media (max-width: ${breakpoints.tablet}) {
+      display: none;
+    }
+  }
+
+  @media (max-width: ${breakpoints.desktop}) {
+    height: ${(props) => (props.variant === 'principal' ? 'auto' : '186px')};
+
+    img {
+      margin: ${(props) =>
+        props.variant === 'principal' ? '40px auto 38px' : '0'};
+    }
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    h1 {
+      margin: ${(props) => (props.variant === 'principal' ? '0' : '0')};
+    }
+
+    p {
+      font-size: ${(props) =>
+        props.variant === 'principal' ? '32px' : '18px'};
+      margin: ${(props) =>
+        props.variant === 'principal' ? '0 50px 40px' : '0'};
+    }
+  }
+
+  @media (max-width: ${breakpoints.cellPhone}) {
+    p {
+      font-size: ${(props) =>
+        props.variant === 'principal' ? '32px' : '18px'};
+      margin: ${(props) =>
+        props.variant === 'principal' ? '0 20px 40px' : '0'};
+    }
   }
 `
 

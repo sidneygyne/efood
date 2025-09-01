@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import colors from '../../styles/colors'
 import { ButtonContainer } from '../Button/styles'
+import { breakpoints } from '../../styles'
 // import { TagContainer } from '../Tag/styles'
 
 export const Overlay = styled.div`
@@ -20,7 +21,7 @@ export const CartContainer = styled.div`
   height: 100%;
   display: none;
   justify-content: flex-end;
-  z-index: 1;
+  z-index: 99;
 
   &.is-open {
     display: flex;
@@ -53,6 +54,10 @@ export const Sidebar = styled.aside`
 
   .containerButton {
     max-width: 95.5%;
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    max-width: 100%;
   }
 `
 export const Prices = styled.p`

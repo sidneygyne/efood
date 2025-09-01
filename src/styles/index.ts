@@ -3,7 +3,8 @@ import colors from './colors'
 
 export const breakpoints = {
   desktop: '1024px',
-  tablet: '768px'
+  tablet: '768px',
+  cellPhone: '480px'
 }
 export const GlobalCss = createGlobalStyle`
   * {
@@ -30,7 +31,16 @@ export const GlobalCss = createGlobalStyle`
   }
 
   @media (max-width: ${breakpoints.desktop} ) {
-    max-width: 80%;
+    max-width: 85%;
   }
+
+  @media (max-width: ${breakpoints.tablet} ) {
+    max-width: 90%;
+  }
+
+  @media (max-width: ${breakpoints.cellPhone} ) {
+    max-width: 95%;
+  }
+
   }
 `

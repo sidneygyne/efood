@@ -79,6 +79,14 @@ export const Cart = () => {
             </Prices>
             <div className="containerButton">
               <Button
+                onClick={closeCart}
+                title="Voltar a loja"
+                type="button"
+                variant="primary"
+              >
+                Voltar a loja
+              </Button>
+              <Button
                 onClick={goToCheckout}
                 title="Clique aqui para continuar com a compra"
                 type="button"

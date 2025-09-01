@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import colors from '../../styles/colors'
 import { ButtonContainer } from '../Button/styles'
+import { breakpoints } from '../../styles'
 // import { TagContainer } from '../Tag/styles'
 
 type RowProps = {
@@ -28,7 +29,7 @@ export const CheckoutAddressContainer = styled.div`
   height: 100%;
   display: flex;
   justify-content: flex-end;
-  z-index: 1;
+  z-index: 99;
 `
 export const Sidebar = styled.aside`
   background: ${colors.red};
@@ -65,6 +66,10 @@ export const Sidebar = styled.aside`
     /* display: flex;
     flex-direction: column;
     gap: 0px; */
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    max-width: 100%;
   }
 `
 
